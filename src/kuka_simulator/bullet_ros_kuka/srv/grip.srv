@@ -1,0 +1,5 @@
+float32 width
+int32 pose
+float32 velocity
+---
+bool success

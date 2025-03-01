@@ -1,0 +1,592 @@
+<robot name="iiwa7">
+<link name="world">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <mass value="0.0"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+</link>
+<link name="iiwa_link_0">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="-0.1 0.0 0.07"/>
+        <mass value="5.0"/>
+        <inertia ixx="0.05" ixy="0.0" ixz="0.0" iyy="0.06" iyz="0.0" izz="0.03"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_0.obj"/>
+        </geometry>
+        <material name="Grey">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_0_vhacd.obj"/>
+        </geometry>
+        <material name="Grey">
+        </material>
+    </collision>
+    <self_collision_checking>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <capsule length="0.25" radius="0.15"/>
+        </geometry>
+    </self_collision_checking>
+</link>
+<link name="iiwa_link_1">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.03 0.12"/>
+        <mass value="3.4525"/>
+        <inertia ixx="0.02183" ixy="0.0" ixz="0.0" iyy="0.007703" iyz="-0.003887" izz="0.02083"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0075"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_1.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0075"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_1_vhacd.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </collision>
+</link>
+<link name="iiwa_link_2">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0003 0.059 0.042"/>
+        <mass value="3.4821"/>
+        <inertia ixx="0.02076" ixy="0.0" ixz="-0.003626" iyy="0.02179" iyz="0.0" izz="0.00779"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_2.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_2_vhacd.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </collision>
+</link>
+<link name="iiwa_link_3">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.03 0.13"/>
+        <mass value="4.05623"/>
+        <inertia ixx="0.03204" ixy="0.0" ixz="0.0" iyy="0.00972" iyz="0.006227" izz="0.03042"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.026"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_3.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.026"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_3_vhacd.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </collision>
+</link>
+<link name="iiwa_link_4">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.067 0.034"/>
+        <mass value="3.4822"/>
+        <inertia ixx="0.02178" ixy="0.0" ixz="0.0" iyy="0.02075" iyz="-0.003625" izz="0.007785"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_4.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_4_vhacd.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </collision>
+</link>
+<link name="iiwa_link_5">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0001 0.021 0.076"/>
+        <mass value="2.1633"/>
+        <inertia ixx="0.01287" ixy="0.0" ixz="0.0" iyy="0.005708" iyz="-0.003946" izz="0.01112"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.026"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_5.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.026"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_5_vhacd.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </collision>
+</link>
+<link name="iiwa_link_6">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0006 0.0004"/>
+        <mass value="2.3466"/>
+        <inertia ixx="0.006509" ixy="0.0" ixz="0.0" iyy="0.006259" iyz="0.00031891" izz="0.004527"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_6.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_6_vhacd.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+    </collision>
+</link>
+<link name="iiwa_link_7">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <mass value="3.129"/>
+        <inertia ixx="0.01464" ixy="0.0005912" ixz="0.0" iyy="0.01465" iyz="0.0" izz="0.002872"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.0005"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_7.obj"/>
+        </geometry>
+        <material name="Grey">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.0005"/>
+        <geometry>
+            <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_7_vhacd.obj"/>
+        </geometry>
+        <material name="Grey">
+        </material>
+    </collision>
+</link>
+<link name="iiwa_link_ee">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <mass value="0.0"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+</link>
+<link name="hand_base_link">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <mass value="0.0"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+</link>
+<link name="table1">
+    <inertial>
+        <mass value="10.0"/>
+        <inertia ixx="1.25" ixy="0.0" ixz="0.0" iyy="2.24" iyz="0.0" izz="2.2"/>
+    </inertial>
+    <visual>
+        <geometry>
+            <mesh filename="package://bullet_ros_kuka/meshes/visual/table1.obj"/>
+        </geometry>
+        <material name="Orange">
+        </material>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.44"/>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="package://bullet_ros_kuka/meshes/collision/table1_vhacd.obj"/>
+        </geometry>
+        <material name="Red">
+        </material>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.44"/>
+    </collision>
+</link>
+<link name="table1_mount">
+    <inertial>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <mass value="0.0"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+</link>
+<link name="bh_base_link">
+    <inertial>
+        <mass value="0.9"/>
+        <origin xyz="0.0 0.0 0.0"/>
+        <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/palm_280.obj"/>
+        </geometry>
+        <material name="Grey">
+            <color rgba="0.75 0.75 0.75 1.0"/>
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/palm_280_vhacd.obj"/>
+        </geometry>
+        <contact_coefficients kd="1.0" kp="1000.0" mu="0.0"/>
+    </collision>
+</link>
+<link name="bh_finger_32_link">
+    <inertial>
+        <mass value="0.01"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_32.obj"/>
+        </geometry>
+        <material name="Blue">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_32_vhacd.obj"/>
+        </geometry>
+        <contact_coefficients kd="1.0" kp="1000.0" mu="0.0"/>
+    </collision>
+</link>
+<link name="bh_finger_33_link">
+    <inertial>
+        <mass value="0.01"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_tip_33.obj"/>
+        </geometry>
+        <material name="Blue">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_tip_33_vhacd.obj"/>
+        </geometry>
+        <contact_coefficients kd="1.0" kp="1000.0" mu="0.0"/>
+    </collision>
+</link>
+<link name="bh_finger_11_link">
+    <inertial>
+        <mass value="0.01"/>
+        <origin rpy="0.0 0.0 0.0" xyz="-0.046 0.0 0.0"/>
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/knuckle.obj"/>
+        </geometry>
+        <material name="Green">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/knuckle_vhacd.obj"/>
+        </geometry>
+    </collision>
+</link>
+<link name="bh_finger_12_link">
+    <inertial>
+        <mass value="0.01"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_12.obj"/>
+        </geometry>
+        <material name="Blue">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_12_vhacd.obj"/>
+        </geometry>
+        <contact_coefficients kd="1.0" kp="1000.0" mu="0.0"/>
+    </collision>
+</link>
+<link name="bh_finger_13_link">
+    <inertial>
+        <mass value="0.01"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_tip_13.obj"/>
+        </geometry>
+        <material name="Blue">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_tip_13_vhacd.obj"/>
+        </geometry>
+        <contact_coefficients kd="1.0" kp="1000.0" mu="0.0"/>
+    </collision>
+</link>
+<link name="bh_finger_21_link">
+    <inertial>
+        <mass value="0.01"/>
+        <origin rpy="0.0 0.0 0.0" xyz="-0.046 0.0 0.0"/>
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/knuckle_2.obj"/>
+        </geometry>
+        <material name="Green">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/knuckle_2_vhacd.obj"/>
+        </geometry>
+    </collision>
+</link>
+<link name="bh_finger_22_link">
+    <inertial>
+        <mass value="0.01"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_22.obj"/>
+        </geometry>
+        <material name="Blue">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_22_vhacd.obj"/>
+        </geometry>
+        <contact_coefficients kd="1.0" kp="1000.0" mu="0.0"/>
+    </collision>
+</link>
+<link name="bh_finger_23_link">
+    <inertial>
+        <mass value="0.01"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_tip_23.obj"/>
+        </geometry>
+        <material name="Blue">
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="package://barrett_hand/meshes/finger_tip_23_vhacd.obj"/>
+        </geometry>
+        <contact_coefficients kd="1.0" kp="1000.0" mu="0.0"/>
+    </collision>
+</link>
+<joint name="world_iiwa_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="world"/>
+    <child link="iiwa_link_0"/>
+</joint>
+<joint name="iiwa_joint_1" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.15"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="300.0" lower="-2.9670597283903604" upper="2.9670597283903604" velocity="10.0"/>
+    <safety_controller k_position="100.0" k_velocity="2.0" soft_lower_limit="-2.9321531433504737" soft_upper_limit="2.9321531433504737"/>
+    <dynamics damping="0.5"/>
+    <parent link="iiwa_link_0"/>
+    <child link="iiwa_link_1"/>
+</joint>
+<joint name="iiwa_joint_2" type="revolute">
+    <origin rpy="1.5707963267948966 0.0 3.141592653589793" xyz="0.0 0.0 0.19"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="300.0" lower="-2.0943951023931953" upper="2.0943951023931953" velocity="10.0"/>
+    <safety_controller k_position="100.0" k_velocity="2.0" soft_lower_limit="-2.0594885173533086" soft_upper_limit="2.0594885173533086"/>
+    <dynamics damping="0.5"/>
+    <parent link="iiwa_link_1"/>
+    <child link="iiwa_link_2"/>
+</joint>
+<joint name="iiwa_joint_3" type="revolute">
+    <origin rpy="1.5707963267948966 0.0 3.141592653589793" xyz="0.0 0.21 0.0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="300.0" lower="-2.9670597283903604" upper="2.9670597283903604" velocity="10.0"/>
+    <safety_controller k_position="100.0" k_velocity="2.0" soft_lower_limit="-2.9321531433504737" soft_upper_limit="2.9321531433504737"/>
+    <dynamics damping="0.5"/>
+    <parent link="iiwa_link_2"/>
+    <child link="iiwa_link_3"/>
+</joint>
+<joint name="iiwa_joint_4" type="revolute">
+    <origin rpy="1.5707963267948966 0.0 0.0" xyz="0.0 0.0 0.19"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="300.0" lower="-2.0943951023931953" upper="2.0943951023931953" velocity="10.0"/>
+    <safety_controller k_position="100.0" k_velocity="2.0" soft_lower_limit="-2.0594885173533086" soft_upper_limit="2.0594885173533086"/>
+    <dynamics damping="0.5"/>
+    <parent link="iiwa_link_3"/>
+    <child link="iiwa_link_4"/>
+</joint>
+<joint name="iiwa_joint_5" type="revolute">
+    <origin rpy="-1.5707963267948966 3.141592653589793 0.0" xyz="0.0 0.21 0.0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="300.0" lower="-2.9670597283903604" upper="2.9670597283903604" velocity="10.0"/>
+    <safety_controller k_position="100.0" k_velocity="2.0" soft_lower_limit="-2.9321531433504737" soft_upper_limit="2.9321531433504737"/>
+    <dynamics damping="0.5"/>
+    <parent link="iiwa_link_4"/>
+    <child link="iiwa_link_5"/>
+</joint>
+<joint name="iiwa_joint_6" type="revolute">
+    <origin rpy="1.5707963267948966 0.0 0.0" xyz="0.0 0.0607 0.19"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="300.0" lower="-2.0943951023931953" upper="2.0943951023931953" velocity="10.0"/>
+    <safety_controller k_position="100.0" k_velocity="2.0" soft_lower_limit="-2.0594885173533086" soft_upper_limit="2.0594885173533086"/>
+    <dynamics damping="0.5"/>
+    <parent link="iiwa_link_5"/>
+    <child link="iiwa_link_6"/>
+</joint>
+<joint name="iiwa_joint_7" type="revolute">
+    <origin rpy="-1.5707963267948966 3.141592653589793 0.0" xyz="0.0 0.081 0.0607"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="300.0" lower="-3.0543261909900763" upper="3.0543261909900763" velocity="10.0"/>
+    <safety_controller k_position="100.0" k_velocity="2.0" soft_lower_limit="-3.01941960595019" soft_upper_limit="3.01941960595019"/>
+    <dynamics damping="0.5"/>
+    <parent link="iiwa_link_6"/>
+    <child link="iiwa_link_7"/>
+</joint>
+<joint name="iiwa_joint_ee" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.045"/>
+    <parent link="iiwa_link_7"/>
+    <child link="iiwa_link_ee"/>
+</joint>
+<joint name="hand_joint" type="fixed">
+    <origin rpy="0.0 0.0 1.57" xyz="0.0 0.0 0.0"/>
+    <parent link="iiwa_link_ee"/>
+    <child link="hand_base_link"/>
+</joint>
+<joint name="table1_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.4 0.0 0.05"/>
+    <parent link="world"/>
+    <child link="table1"/>
+</joint>
+<joint name="table1_mount_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.4625 0.0 0.0"/>
+    <parent link="table1"/>
+    <child link="table1_mount"/>
+</joint>
+<joint name="bh_base_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="hand_base_link"/>
+    <child link="bh_base_link"/>
+</joint>
+<joint name="bh_j32_joint" type="revolute">
+    <origin rpy="1.5708 0.0 1.5708" xyz="0.0 -0.05 0.0754"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <limit effort="30.0" lower="0.0" upper="2.44" velocity="2.0"/>
+    <parent link="bh_base_link"/>
+    <child link="bh_finger_32_link"/>
+</joint>
+<joint name="bh_j33_joint" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.069936 0.003 0.0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <mimic joint="bh_j32_joint" multiplier="0.3442622950819672"/>
+    <limit effort="30.0" lower="0.0" upper="0.84" velocity="2.0"/>
+    <parent link="bh_finger_32_link"/>
+    <child link="bh_finger_33_link"/>
+</joint>
+<joint name="bh_j11_joint" type="revolute">
+    <origin rpy="0.0 0.0 -1.5708" xyz="0.025 0.0 0.0415"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <limit effort="30.0" lower="0.0" upper="3.1416" velocity="2.0"/>
+    <parent link="bh_base_link"/>
+    <child link="bh_finger_11_link"/>
+</joint>
+<joint name="bh_j12_joint" type="revolute">
+    <origin rpy="1.5708 0.0 0.0" xyz="-0.05 0.0 0.0339"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <limit effort="30.0" lower="0.0" upper="2.44" velocity="2.0"/>
+    <parent link="bh_finger_11_link"/>
+    <child link="bh_finger_12_link"/>
+</joint>
+<joint name="bh_j13_joint" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.069936 0.003 0.0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <mimic joint="bh_j12_joint" multiplier="0.3442622950819672"/>
+    <limit effort="30.0" lower="0.0" upper="0.84" velocity="2.0"/>
+    <parent link="bh_finger_12_link"/>
+    <child link="bh_finger_13_link"/>
+</joint>
+<joint name="bh_j21_joint" type="revolute">
+    <origin rpy="0.0 0.0 -1.5708" xyz="-0.025 0.0 0.0415"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <mimic joint="bh_j11_joint" multiplier="1.0"/>
+    <limit effort="30.0" lower="0.0" upper="3.1416" velocity="2.0"/>
+    <parent link="bh_base_link"/>
+    <child link="bh_finger_21_link"/>
+</joint>
+<joint name="bh_j22_joint" type="revolute">
+    <origin rpy="1.5708 -8.8281e-17 0.0" xyz="-0.05 0.0 0.0339"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <limit effort="30.0" lower="0.0" upper="2.44" velocity="2.0"/>
+    <parent link="bh_finger_21_link"/>
+    <child link="bh_finger_22_link"/>
+</joint>
+<joint name="bh_j23_joint" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.069936 0.003 0.0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <mimic joint="bh_j22_joint" multiplier="0.3442622950819672"/>
+    <limit effort="30.0" lower="0.0" upper="0.84" velocity="2.0"/>
+    <parent link="bh_finger_22_link"/>
+    <child link="bh_finger_23_link"/>
+</joint>
+</robot>

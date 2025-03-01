@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<launch>
+    <arg name="rviz" default="true"/>
+    <arg name="sim" default="true"/>
+    <arg name="robot" default="ur"/>
+
+    <include if="$(arg sim)" file="$(eval find('bullet_ros_' + arg('robot')) + '/launch/simulation.launch')">
+        <arg name="rviz" value="$(arg rviz)"/>
+    </include>
+
+    <include unless="$(arg sim)" file="$(find ur10e_humanoids)/launch/run_robot.launch">
+        <arg name="rviz" value="$(arg rviz)"/>
+    </include>
+
+</launch>

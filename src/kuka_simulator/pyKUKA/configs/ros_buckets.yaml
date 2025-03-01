@@ -1,0 +1,54 @@
+vhacd: # global vhacd
+  use_vhacd: True # whether to use VHACD for collision detection
+                    # default: True
+                    # True, False
+  force_vhacd: False # whether to force creation of VHACD meshes if they are already exists
+                     # default: False
+                     # False, True
+  force_vhacd_urdf: True # whether to force creation of URDF with paths changed to VHACD meshes if it are already exists
+                         # default: True
+                         # False, True
+robot_urdf_path: "../../../bullet_ros_kuka/urdf/kuka.urdf" # path to Robot URDF file relative to pyur.py
+                               # default: "../iCub/full.urdf"
+                               # str
+gui: False # whether to sho GUI
+          # default: True
+          # True, False
+tolerance:
+  joint: 1e-3 # circa 2 degrees
+end_effector: "iiwa_link_7" # end effector name
+                       # default: "l_hand"
+                       # str
+initial_joint_angles: {'iiwa_joint_1': -32.96, 'iiwa_joint_2': 22.42, 'iiwa_joint_3': -27.77, 'iiwa_joint_4': -112.93,
+                       'iiwa_joint_5': 25, 'iiwa_joint_6': -115, 'iiwa_joint_7': -19.26} # initial joint angles
+show_collision: True
+urdfs: # other than robot urdfs or .obj files
+  paths: [bucket/bucket_1.urdf, bucket/bucket_2.urdf, bucket/bucket_3.urdf, force_measuring_device/fmd.urdf] # path to files relative "other_meshes" directory
+  positions: [[0.7, -0.375, 1.25], [0.675, 0.25, 1.35], [0.1, 0.2, 1.6], [0.65, 0.3, 0.0]] # position of the mesh/urdf base link in the world frame
+  fixed: [True, True, True, True] # whether the mesh/urdf can move in space
+  color: [[], [], [], []] # color on RGB format (0-1)
+  force: [0.25, 0.25, 0.25, 15]
+skin: # skin settings
+  use: False # whether to show and simulate skin
+              # default: False
+              # True, False
+  period: 30 # FPS for skin
+
+collision_tolerance: 0.001
+debug: False
+log: # log settings
+  log: False # whether to log data
+            # default: True
+            # True, False
+  period: 0.01 # period of logging
+            # default: 0.01
+            # float; 0 for logging as fast as every simulation step
+            # it will never log faster than the simulation step
+simulation_step: 250   # during each simulation step, the simulation time will advance for 1/simulation_step seconds
+                       # default: 240 (the default bullet simulation step)
+                       # float
+                       # the higher, the more precise simulation, but slower simulation
+                       # values lower than 200 will most probably break the simulation
+self_collisions: True # Whether to detect self collisions of the links of the robot
+                       # default: True
+                       # True, False

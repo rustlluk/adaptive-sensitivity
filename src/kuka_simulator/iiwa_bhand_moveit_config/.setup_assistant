@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: iiwa_bhand_description
+    relative_path: robots/iiwa7_bhand.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/iiwa7.srdf
+  CONFIG:
+    author_name: Alejandro Arnal
+    author_email: aarnal@robotnik.es
+    generated_timestamp: 1565770825

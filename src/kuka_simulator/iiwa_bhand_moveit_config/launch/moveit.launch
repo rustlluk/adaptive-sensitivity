@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="sim" default="false"/>
+  <arg name="rviz" default="true"/>
+  <arg name="bhand" default="false"/>
+  <include file="$(find iiwa_bhand_moveit_config)/launch/moveit_planning_execution.launch">
+    <arg name="sim" value="$(arg sim)"/>
+    <arg name="rviz" value="$(arg rviz)"/>
+    <arg name="bhand" value="$(arg bhand)"/>
+  </include>
+</launch>
