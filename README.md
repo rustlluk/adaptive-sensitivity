@@ -4,7 +4,19 @@ This repository contains code for the article:
 
 **Rustler, L.; Misar, M. & Hoffmann, M. (2025), Adaptive Collision Sensitivity for Efficient and Safe Human-Robot Collaboration. Submitted to review**  
 
-Preprint available at [arxiv](TODO).
+Preprint available at [arxiv](https://arxiv.org/abs/2409.20184). Use this bibtex code when used in your work:
+
+```bibtex
+@misc{rustler2025adaptivecollisionsensitivityefficient,
+      title={Adaptive Collision Sensitivity for Efficient and Safe Human-Robot Collaboration},
+      author={Lukas Rustler and Matej Misar and Matej Hoffmann},
+      year={2025},
+      eprint={2409.20184},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2409.20184},
+}
+```
 **Maintainer**: Lukas Rustler, lukas.rustler@fel.cvut.cz  
 
 # Contents
