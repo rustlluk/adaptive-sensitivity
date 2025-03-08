@@ -2,7 +2,7 @@
 
 This repository contains code for the article:
 
-**Rustler, L.; Misar, M. & Hoffmann, M. (2025), Adaptive Collision Sensitivity for Efficient and Safe Human-Robot Collaboration. Submitted to review**  
+**Rustler, L.; Misar, M. & Hoffmann, M. (2025), Adaptive Collision Sensitivity for Efficient and Safe Human-Robot Collaboration. Submitted for review**  
 
 Preprint available at [arxiv](https://arxiv.org/abs/2409.20184). Use this bibtex code when used in your work:
 
@@ -114,6 +114,9 @@ The main package with experiment code is [airskin_pain](src/airskin_pain) with t
     - `rosrun airskin_pain main.py` to run the movement
     - `rosrun airskin_pain airskin_feedback.py` to run airskin events (kuka_feedback)
     - `rosrun airskin_pain eff_mass.py` to run the effective mass computation, if used
+
+# Video
+An accompanying video is available on [Youtube](https://youtu.be/UyOa--6Jpj4).
 
 # Real setup
 The code is working the same for both simulation and real setup. However, to use it in real world you need the HW
