@@ -30,7 +30,7 @@ Preprint available at [arxiv](https://arxiv.org/abs/2409.20184). Use this bibtex
  - [Real Setup](#real-setup)
 
 ## Licensing
-The code created in this work is under GNU-3 licence.  
+The code created in this work is under CC-BY 4.0 licence.  
 For licensing information about other used repositories see: 
 [LICENSE](LICENSE), and the original repositories:  
 - [kdl_parser_py](https://github.com/ros/kdl_parser) 
