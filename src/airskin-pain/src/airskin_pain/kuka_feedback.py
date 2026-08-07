@@ -7,7 +7,7 @@ import argparse
 
 def prepare_parser():
     arg_parser = argparse.ArgumentParser(
-        description="Main script for shape completion experiments"
+        description="Kuka feedback"
     )
 
     arg_parser.add_argument(

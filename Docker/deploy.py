@@ -3,6 +3,12 @@
 import argparse
 from subprocess import call, PIPE, run
 import create_xauth
+import datetime
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:
+    from backports.zoneinfo import ZoneInfo
+import re
 
 
 def parse():
@@ -90,8 +96,8 @@ def parse():
         "-pcv",
         dest="pycharm_ver",
         required=False,
-        default="2024.1.3",
-        help="pycharm version to be used; default 2024.1.3"
+        default="2026.2.0.1",
+        help="pycharm version to be used; default 2026.2.0.1"
     )
 
     args = parser.parse_args()
@@ -122,10 +128,47 @@ def main():
         print(cmd)
         call(cmd, shell=True)
 
-        image_info = run("docker image ls | grep "+image, shell=True, stdout=PIPE).stdout.decode("utf-8")
-        if "second" not in image_info:
-            inp = input(f"{image} was either not built properly or already built before. "
-                        f"Do you still want to try to run it? ")
+        process = run(
+            ["docker", "inspect", "-f", "{{.Metadata.LastTagTime}}", image],
+            capture_output=True,
+            text=True
+        )
+
+        if process.returncode != 0:
+            print(f"Error: Could not find image '{image}'.")
+            return 0
+
+        created_str = process.stdout.strip()
+        parts = created_str.split()
+
+        if len(parts) >= 3:
+            date_part = parts[0]
+            time_part = parts[1].split('.')[0]
+            offset_part = parts[2]
+
+            clean_time_str = f"{date_part} {time_part} {offset_part}"
+
+            # Parse the time (which is in +0200), then immediately convert it to UTC!
+            image_time = datetime.datetime.strptime(
+                clean_time_str, "%Y-%m-%d %H:%M:%S %z"
+            ).astimezone(datetime.timezone.utc)
+        else:
+            print(f"Error parsing Docker date string: '{created_str}'")
+            return 0
+
+        # Get current time in UTC
+        now_utc = datetime.datetime.now(datetime.timezone.utc)
+
+        # Optional: Print them out to prove they now match perfectly
+        # print(f"Image time (UTC): {image_time}")
+        # print(f"Now (UTC):        {now_utc}")
+
+        seconds_since_creation = (now_utc - image_time).total_seconds()
+
+        if seconds_since_creation > 60:
+            inp = input(
+                f"'{image}' was built {int(seconds_since_creation)} seconds ago. It was either built before or failed building. "
+                f"Do you still want to try to run it? (y/n): ")
             if inp.lower() not in ["y", "yes"]:
                 return 0
 

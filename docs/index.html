@@ -7,7 +7,7 @@
   <meta name="description" content="DESCRIPTION META TAG">
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="lukasrustler.cz/adaptive-skin"/>
+  <meta property="og:url" content="lukasrustler.cz/adaptive-sensitivity"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
@@ -72,7 +72,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/abs/2409.20184" target="_blank"
+                        <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aisy.70494" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -147,8 +147,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            What is considered safe for a robot operator during physical human-robot collaboration (HRC) is specified in corresponding HRC standards (e.g.,  ISO/TS 15066). The regime that allows collisions between the moving robot and the operator, called Power and Force Limiting (PFL), restricts the permissible contact forces. Using the same fixed contact thresholds on the entire robot surface results in significant and unnecessary productivity losses, as the robot needs to stop even when impact forces are within limits. Here we present a framework that decides whether the robot should interrupt or continue its motion based on estimated collision force computed individually for different parts of the robot body and dynamically on the fly, based on the effective mass of each robot link and the link velocity. We performed experiments on simulated and real 6-axis collaborative robot arm (UR10e) with sensitive skin (AIRSKIN) for collision detection and isolation. To demonstrate the generality of our method, we added experiments on the simulated KUKA LBR iiwa robot, where collision detection and isolation draws on joint torque sensing. On a mock pick-and-place scenario with both transient and quasi-static collisions, we demonstrate how sensitivity to collisions influences the task performance and number of stops. We show an increase in productivity over 45\% from using the standard approach that interrupts the tasks during every collision. While reducing the cycle time and the number of interruptions, our framework also ensures the safety of human operators. The method is applicable to any robot for which the effective mass can be calculated.
-          </p>
+What is considered safe for a robot operator during physical human–robot collaboration (HRC) is specified in corresponding HRC standards (e.g., ISO 10218-2:2025). The regime that allows collisions between the moving robot and the operator, called Power and Force Limiting (PFL), restricts the permissible contact forces. Using the same fixed contact thresholds on the entire robot surface results unnecessary productivity losses, as the robot needs to stop even when impact forces are within limits. Here we present a framework that decides whether the robot should interrupt motion based on estimated collision force computed individually for different parts of the robot body and dynamically on the fly, based on the Effective Mass (EM) of each robot link. We performed experiments on a simulated and real collaborative robot arm (UR10e) with sensitive skin (AIRSKIN) for collision detection and isolation. To demonstrate the generality of our method, we added experiments on simulated KUKA LBR iiwa robot, where collision sensing draws on joint torque sensing. On a mock pick-and-place scenario with both transient and quasi-static collisions, we show an increase in productivity over 45% from using the standard approach. The method is applicable to any robot for which the EF can be calculated.          </p>
         </div>
       </div>
     </div>
@@ -161,15 +160,14 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{rustler2025adaptivecollisionsensitivityefficient,
-      title={Adaptive Collision Sensitivity for Efficient and Safe Human-Robot Collaboration},
-      author={Lukas Rustler and Matej Misar and Matej Hoffmann},
-      year={2025},
-      eprint={2409.20184},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2409.20184},
-}</code></pre>
+      <pre><code>@article{Rustler2026Adaptive,
+author = {Rustler, Lukas and Misar, Matej and Hoffmann, Matej},
+title = {Adaptive Collision Sensitivity for Efficient and Safe Human–Robot Collaboration},
+journal = {Advanced Intelligent Systems},
+volume = {n/a},
+number = {n/a},
+pages = {e70494},
+doi = {https://doi.org/10.1002/aisy.70494}}}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->

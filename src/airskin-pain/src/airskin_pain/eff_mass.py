@@ -13,7 +13,7 @@ import sys
 
 def prepare_parser():
     arg_parser = argparse.ArgumentParser(
-        description="Main script for shape completion experiments"
+        description="Eff mass"
     )
 
     arg_parser.add_argument(

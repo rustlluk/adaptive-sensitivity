@@ -2,20 +2,23 @@
 
 This repository contains code for the article:
 
-**Rustler, L.; Misar, M. & Hoffmann, M. (2025), Adaptive Collision Sensitivity for Efficient and Safe Human-Robot Collaboration. Submitted for review**  
+**Rustler, L.; Misar, M. & Hoffmann, M. (2026), Adaptive Collision Sensitivity for Efficient and Safe Human-Robot Collaboration.**  
 
-Preprint available at [arxiv](https://arxiv.org/abs/2409.20184). Use this bibtex code when used in your work:
+Preprint available at [arxiv](https://arxiv.org/abs/2409.20184) and accepted article available at [Advanced Intelligent Systems](https://onlinelibrary.wiley.com/doi/10.1002/aisy.70494). 
+
+Use this bibtex code when used in your work (the article is currently in early view and thus volume and pages information are missing):
+
+
 
 ```bibtex
-@misc{rustler2025adaptivecollisionsensitivityefficient,
-      title={Adaptive Collision Sensitivity for Efficient and Safe Human-Robot Collaboration},
-      author={Lukas Rustler and Matej Misar and Matej Hoffmann},
-      year={2025},
-      eprint={2409.20184},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2409.20184},
-}
+@article{Rustler2026Adaptive,
+author = {Rustler, Lukas and Misar, Matej and Hoffmann, Matej},
+title = {Adaptive Collision Sensitivity for Efficient and Safe Human–Robot Collaboration},
+journal = {Advanced Intelligent Systems},
+volume = {n/a},
+number = {n/a},
+pages = {e70494},
+doi = {https://doi.org/10.1002/aisy.70494}}
 ```
 **Maintainer**: Lukas Rustler, lukas.rustler@fel.cvut.cz  
 
@@ -111,6 +114,7 @@ The main package with experiment code is [airskin_pain](src/airskin_pain) with t
 
   2) you can run everything by hand. Use the following commands and check parameters of each script in the corresponding file
     - run `roslaunch airskin_pain main.launch` to run ROS + start drivers
+     - running for the first time will take time due to decomposition of meshes. It is recommended to run this, wait for decomposition, close and start again
     - `rosrun airskin_pain main.py` to run the movement
     - `rosrun airskin_pain airskin_feedback.py` to run airskin events (kuka_feedback)
     - `rosrun airskin_pain eff_mass.py` to run the effective mass computation, if used

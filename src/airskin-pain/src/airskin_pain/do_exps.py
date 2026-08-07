@@ -10,7 +10,7 @@ import signal
 
 def prepare_parser():
     arg_parser = argparse.ArgumentParser(
-        description="Main script for shape completion experiments"
+        description="Main script for bump experiments"
     )
     arg_parser.add_argument(
         "--setup",
